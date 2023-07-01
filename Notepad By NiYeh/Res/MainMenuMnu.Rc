@@ -1,0 +1,38 @@
+#define IDR_MENU 10000
+#define IDM_File 10001
+#define IDM_Open_File 10002
+#define IDM_Save_File 10003
+#define IDM_Line 10004
+#define IDM_File_Exit 10005
+#define IDM_Edit 10006
+#define IDM_Edit_Undo 10007
+#define IDM_Edit_Redo 10008
+#define IDM_Line2 10009
+#define IDM_Edit_Cut 10010
+#define IDM_Edit_Copy 10011
+#define IDM_Edit_Paste 10012
+#define IDM_Help 10013
+#define IDM_Help_About 10014
+IDR_MENU MENUEX
+BEGIN
+  POPUP "&File",IDM_File
+  BEGIN
+    MENUITEM "&Open File",IDM_Open_File
+    MENUITEM "&SaveFile",IDM_Save_File
+    MENUITEM "",IDM_Line,0x00000800
+    MENUITEM "Exit Application",IDM_File_Exit
+  END
+  POPUP "&Edit",IDM_Edit
+  BEGIN
+    MENUITEM "Undo ",IDM_Edit_Undo
+    MENUITEM "Redo",IDM_Edit_Redo
+    MENUITEM "",IDM_Line2,0x00000800
+    MENUITEM "&Cut",IDM_Edit_Cut
+    MENUITEM "&Copy",IDM_Edit_Copy
+    MENUITEM "&Paste",IDM_Edit_Paste
+  END
+  POPUP "&Help",IDM_Help
+  BEGIN
+    MENUITEM "&About",IDM_Help_About
+  END
+END
